@@ -602,43 +602,25 @@
   display: none;
 }
     .env-box {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-
-.env-box {
-  flex-direction: row-reverse;
-}
-   
-  
-    .env-img {
-  width: 100%;
-  max-width: 320px;
-  height: auto;
-}
-    .env-box {
   background: #f8fafc;
   border-radius: 24px;
-  padding: 54px;
+  padding: 40px;
   box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column; /* 🔥 세로 쌓기 */
   align-items: center;
-  justify-content: center;
-  gap: 56px;
+  text-align: center;
 }
-
-.env-text {
-  flex: 0 1 700px;
-}
-
-.env-img {
+    .env-img {
   width: 100%;
-  max-width: 420px;
+  max-width: 900px;
   height: auto;
-  flex-shrink: 0;
-  display: block;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+    .env-text {
+  max-width: 700px;
 }
   </style>
 </head>
@@ -801,21 +783,27 @@
     </section>
 
    <section id="environment" class="section">
-  <div class="page-wrap env-box">
-    <div class="env-text">
-      <h2>국내 최고의 교육 환경</h2>
+  <div class="page-wrap">
 
-      <ul class="feature-list">
-        <li>해외 공연 기회 제공 및 비용 지원</li>
-        <li>독일,이탈리아 등 5개국의 거장들과의 협력</li>
-        <li>스타인웨이 피아노,크레모나 바이올린 등 최상급의 악기 보유 </li>
-        <li>학생들의 건강을 챙겨주는 친환경 급식실</li>
-        <li>스트레스 해소 및 운동을 위한 대형 축구장</li>
-        <li>교양을 쌓고 휴식을 위한 대형 도서관</li>
-      </ul>
+    <div class="env-box">
+
+      <img class="env-img" src="since.png" alt="학교 통계" />
+
+      <div class="env-text">
+        <h2>국내 최고의 교육 환경</h2>
+
+        <ul class="feature-list">
+          <li>해외 공연 기회 제공 및 비용 지원</li>
+          <li>독일,이탈리아 등 5개국의 거장들과의 협력</li>
+          <li>스타인웨이 피아노,크레모나 바이올린 등 최상급의 악기 보유</li>
+          <li>학생들의 건강을 챙겨주는 친환경 급식실</li>
+          <li>스트레스 해소 및 운동을 위한 대형 축구장</li>
+          <li>교양을 쌓고 휴식을 위한 대형 도서관</li>
+        </ul>
+      </div>
+
     </div>
 
-    <img class="env-img" src="since.png" alt="학교 통계" />
   </div>
 </section>
   </main>
