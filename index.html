@@ -438,6 +438,140 @@
   color: #666;
   line-height: 1.6;
 }
+    .site-footer {
+  background: #dcdcdc;
+  padding: 26px 40px;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #222;
+  border-top: 1px solid #cfcfcf;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-left {
+  flex: 0 0 230px;
+}
+
+.footer-logo-wrap {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.footer-logo-circle {
+  width: 48px;
+  height: 48px;
+  border: 2px solid #159a52;
+  border-radius: 50%;
+  color: #159a52;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  background: #fff;
+}
+
+.footer-school-name strong {
+  display: block;
+  color: #159a52;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.footer-school-name span {
+  color: #159a52;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.footer-center {
+  flex: 1;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.footer-links {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.footer-links a {
+  color: #222;
+  text-decoration: none;
+}
+
+.footer-links a:first-child {
+  color: #d62828;
+  font-weight: 800;
+}
+
+.footer-links span {
+  margin: 0 10px;
+  color: #666;
+}
+
+.footer-center p {
+  margin: 0;
+}
+
+.footer-right {
+  flex: 0 0 170px;
+  text-align: left;
+}
+
+.footer-counter-title {
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+
+.footer-counter-link {
+  font-size: 13px;
+  color: #0b6eb8;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.footer-counter-box {
+  display: flex;
+  overflow: hidden;
+  border-radius: 2px;
+  width: 145px;
+}
+
+.counter-item {
+  flex: 1;
+  background: #0e5f5c;
+  color: white;
+  text-align: center;
+  padding: 4px 6px;
+  border-right: 1px solid rgba(255,255,255,0.2);
+}
+
+.counter-item:last-child {
+  border-right: none;
+}
+
+.counter-label {
+  display: block;
+  font-size: 10px;
+  opacity: 0.9;
+  margin-bottom: 2px;
+}
+
+.counter-item strong {
+  font-size: 18px;
+  font-weight: 800;
+}
   </style>
 </head>
 <body class="snap-container">
@@ -636,6 +770,52 @@
       });
     });
   </script>
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <div class="footer-logo-wrap">
+        <div class="footer-logo-circle">로고</div>
+        <div class="footer-school-name">
+          <strong>오름예술고등학교</strong><br />
+          <span>Oreum Arts High School</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-center">
+      <div class="footer-links">
+        <a href="#">개인정보처리방침</a>
+        <span>|</span>
+        <a href="#">서비스이용약관</a>
+        <span>|</span>
+        <a href="#">저작권보호정책</a>
+        <span>|</span>
+        <a href="#">위치 및 연락처</a>
+      </div>
+
+      <p>[12345] 서울시 예술구 창조로 77 (예술동, 오름예술고등학교)</p>
+      <p>서울 예술구 꿈빛로 21</p>
+      <p>대표전화) 02-3456-7890&nbsp;&nbsp;&nbsp;팩스) 02-3456-7891</p>
+      <p>Copyright © 오름예술고등학교 Oreum Arts High School. All rights reserved.</p>
+    </div>
+
+    <div class="footer-right">
+      <div class="footer-counter-title">교육청인증사이트</div>
+      <div class="footer-counter-link">보안인증사이트</div>
+
+      <div class="footer-counter-box">
+        <div class="counter-item">
+          <span class="counter-label">TODAY</span>
+          <strong>24</strong>
+        </div>
+        <div class="counter-item">
+          <span class="counter-label">TOTAL</span>
+          <strong>128945</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
 
