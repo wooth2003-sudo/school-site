@@ -385,6 +385,59 @@
         padding: 30px 22px;
       }
     }
+    .quick-links-section {
+  padding: 80px 24px;
+}
+
+.quick-links-head {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.quick-links-head h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.quick-links-head p {
+  color: #555;
+}
+
+.quick-links-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.quick-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid #ddd;
+  transition: 0.2s;
+}
+
+.quick-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.quick-num {
+  font-size: 20px;
+  font-weight: bold;
+  color: #8B5E3C;
+  margin-bottom: 10px;
+}
+
+.quick-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.quick-card p {
+  color: #666;
+  line-height: 1.6;
+}
   </style>
 </head>
 <body class="snap-container">
@@ -443,24 +496,34 @@
       <p>오름예술고등학교의 주요 소식을 한눈에 확인해보세요.</p>
     </div>
 
+    <section id="quick-links" class="section quick-links-section">
+  <div class="page-wrap">
+
+    <div class="quick-links-head">
+      <h2>학교 바로가기</h2>
+      <p>오름예술고등학교의 주요 소식을 한눈에 확인해보세요.</p>
+    </div>
+
     <div class="quick-links-grid">
-      <a href="#news" class="quick-card">
-        <div class="quick-card-label">01</div>
+
+      <div class="quick-card">
+        <div class="quick-num">01</div>
         <h3>소식통</h3>
         <p>학교 공지와 최근 소식, 주요 일정과 안내사항을 확인할 수 있습니다.</p>
-      </a>
+      </div>
 
-      <a href="#meal" class="quick-card">
-        <div class="quick-card-label">02</div>
+      <div class="quick-card">
+        <div class="quick-num">02</div>
         <h3>급식 식단표</h3>
         <p>주간 급식 메뉴와 식단 정보를 쉽고 빠르게 확인할 수 있습니다.</p>
-      </a>
+      </div>
 
-      <a href="#festival" class="quick-card">
-        <div class="quick-card-label">03</div>
+      <div class="quick-card">
+        <div class="quick-num">03</div>
         <h3>학교 축제</h3>
         <p>축제 일정, 프로그램, 공연 정보와 현장 안내를 만나볼 수 있습니다.</p>
-      </a>
+      </div>
+
     </div>
   </div>
 </section>
