@@ -1,1 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>오름예술고등학교 로그인</title>
 
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+}
+
+.login-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 70px 16px;
+}
+
+.login-title {
+  font-size: 56px;
+  font-weight: 800;
+  margin-bottom: 90px;
+}
+
+.login-line {
+  height: 4px;
+  background: #78a9b7;
+  margin-bottom: 36px;
+}
+
+.login-input {
+  width: 100%;
+  height: 96px;
+  font-size: 28px;
+  margin-bottom: 24px;
+  padding: 0 20px;
+}
+
+.login-btn {
+  width: 100%;
+  height: 96px;
+  font-size: 30px;
+  background: #78a9b7;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* ===== 해킹 연출 ===== */
+
+.access-overlay {
+  position: fixed;
+  inset: 0;
+  background: black;
+  display: none;
+  z-index: 9999;
+  color: #00ff66;
+  font-family: monospace;
+}
+
+.access-overlay.show {
+  display: block;
+}
+
+/* 붉은 퍼짐 */
+.access-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(255,0,0,0.2), black 70%);
+}
+
+/* 노이즈 */
+.access-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.05) 0px,
+    rgba(255,255,255,0.05) 1px,
+    transparent 2px,
+    transparent 5px
+  );
+  animation: noise 0.08s infinite alternate;
+}
+
+.hack-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 80%;
+  border: 4px solid #00ff66;
+  background: rgba(0,0,0,0.85);
+  box-shadow: 0 0 20px #00ff66;
+}
+
+/* 상단 */
+.hack-header {
+  padding: 15px;
+  border-bottom: 2px solid #00ff66;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 왼쪽 글자 */
+.access-title {
+  color: #00ff66;
+}
+
+/* 오른쪽 */
+.hack-status {
+  color: #00ff66;
+}
+
+.hack-body {
+  padding: 20px;
+}
+
+.terminal-line {
+  margin-bottom: 10px;
+  opacity: 0;
+}
+
+.terminal-line.show {
+  opacity: 1;
+}
+
+.live-feed {
+  color: red;
+  font-weight: bold;
+}
+
+/* 애니메이션 */
+@keyframes noise {
+  from { opacity: 0.5; }
+  to { opacity: 0.8; }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="login-page">
+  <h1 class="login-title">로그인</h1>
+
+  <div class="login-line"></div>
+
+  <form onsubmit="login(event)">
+    <input id="id" class="login-input" placeholder="아이디">
+    <input id="pw" type="password" class="login-input" placeholder="비밀번호">
+    <button class="login-btn">로그인</button>
+  </form>
+</div>
+
+<!-- 해킹 화면 -->
+<div id="overlay" class="access-overlay">
+  <div class="hack-window">
+    <div class="hack-header">
+      <span class="access-title">CONNECTING TO CCTV_ARCHIVE</span>
+      <span class="hack-status">ACCESS OK</span>
+    </div>
+
+    <div class="hack-body">
+      <div id="l1" class="terminal-line"></div>
+      <div id="l2" class="terminal-line"></div>
+      <div id="l3" class="terminal-line"></div>
+      <div id="l4" class="terminal-line"></div>
+      <div id="l5" class="terminal-line"></div>
+      <div id="l6" class="terminal-line live-feed"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+const idValue = "admin1";
+const pwValue = "admin2";
+
+function login(e){
+  e.preventDefault();
+
+  const id = document.getElementById("id").value;
+  const pw = document.getElementById("pw").value;
+
+  if(id === idValue && pw === pwValue){
+    start();
+  } else {
+    alert("로그인 실패");
+  }
+}
+
+function type(el, text, speed=20){
+  return new Promise(resolve=>{
+    let i=0;
+    el.classList.add("show");
+
+    function t(){
+      if(i < text.length){
+        el.innerHTML = text.slice(0,i+1);
+        i++;
+        setTimeout(t,speed);
+      } else resolve();
+    }
+    t();
+  });
+}
+
+async function start(){
+  document.getElementById("overlay").classList.add("show");
+
+  await type(l1, "ACCESS GRANTED");
+  await type(l2, "DECRYPTING...");
+  await type(l3, "CAM_01 OPEN");
+  await type(l4, "LOADING DATA...");
+  await type(l5, "AUTH SUCCESS");
+
+  await type(l6, "OPENING LIVE FEED...", 15);
+
+  setTimeout(()=>{
+    location.href = "cctv.html";
+  },1000);
+}
+</script>
+
+</body>
+</html>
