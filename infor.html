@@ -54,6 +54,32 @@
       margin-bottom: 18px;
     }
 
+    .info-box {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .info-item {
+      flex: 1;
+      min-width: 200px;
+      background: #fff4f7;
+      padding: 18px;
+      border-radius: 14px;
+      text-align: center;
+      border: 1px solid #f0d9df;
+    }
+
+    .info-item span {
+      display: block;
+      font-size: 14px;
+      color: #999;
+      margin-bottom: 6px;
+    }
+
     .motto {
       font-size: 34px;
       font-weight: 800;
@@ -93,11 +119,6 @@
       border: 1px solid #eee;
     }
 
-    .tag {
-      color: #d85c7f;
-      font-weight: 800;
-    }
-
     @media (max-width: 700px) {
       .symbol-wrap {
         flex-direction: column;
@@ -124,11 +145,24 @@
     <div class="main-title">
       <h1>오름예술고등학교 소개</h1>
       <p>예술로 꿈을 키우고, 조화로운 미래를 그리는 학교</p>
-  <p style="margin-top:10px; font-size:14px; color:#888;">
-    개교기념일 | 1953년년 12월 5일 &nbsp;&nbsp; | &nbsp;&nbsp; 설립자 | 탁승히
-  </p>
-</div>
     </div>
+
+    <!-- ⭐ 개교기념일 & 설립자 -->
+    <section class="section">
+      <div class="section-title">학교 정보 |</div>
+
+      <div class="info-box">
+        <div class="info-item">
+          <span>개교기념일</span>
+          2005년 3월 2일
+        </div>
+
+        <div class="info-item">
+          <span>설립자</span>
+          탁승히
+        </div>
+      </div>
+    </section>
 
     <section class="section">
       <div class="section-title">교훈 |</div>
