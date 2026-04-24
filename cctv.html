@@ -110,6 +110,17 @@ window.onload = () => {
   const bgm = document.getElementById("bgm");
   bgm.play().catch(() => {});
 };
+  <audio id="bgm" src="ho.mp3" loop></audio>
+
+<script>
+window.onload = () => {
+  const bgm = document.getElementById("bgm");
+
+  bgm.volume = 0.3; // 🔊 볼륨 30%
+
+  bgm.play().catch(() => {});
+};
+</script>
 </script>
 
 </body>
