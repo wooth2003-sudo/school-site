@@ -10,10 +10,19 @@
       font-family: "Pretendard", "Noto Sans KR", Arial, sans-serif;
       background: #fff;
     }
-    <!-- 상단 배너 -->
-<div class="top-banner">
-  <img src="banner.png" alt="오름예술고등학교 배너">
-</div>
+
+    /* 배너 */
+    .top-banner {
+      width: 100%;
+      margin-bottom: 30px;
+      overflow: hidden;
+    }
+
+    .top-banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
 
     .board {
       width: 100%;
@@ -59,20 +68,15 @@
     .title a:hover {
       text-decoration: underline;
     }
-    .top-banner {
-  width: 100%;
-  overflow: hidden;
-}
-
-.top-banner img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
   </style>
 </head>
 
 <body>
+
+<!-- ✅ 여기로 이동 -->
+<div class="top-banner">
+  <img src="banner.png" alt="오름예술고등학교 배너">
+</div>
 
 <table class="board">
   <thead>
