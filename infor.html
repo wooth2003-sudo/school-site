@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>학교 소개</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Pretendard", "Noto Sans KR", Arial, sans-serif;
+      background: #fffaf7;
+      color: #111;
+      line-height: 1.8;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 70px 24px;
+    }
+
+    .main-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .main-title h1 {
+      font-size: 42px;
+      margin: 0 0 12px;
+    }
+
+    .main-title p {
+      color: #777;
+      margin: 0;
+    }
+
+    .section {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 24px;
+      padding: 36px;
+      margin-bottom: 34px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+    }
+
+    .section-title {
+      color: #d84c73;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .motto {
+      font-size: 34px;
+      font-weight: 700;
+      letter-spacing: 8px;
+      text-align: center;
+      padding: 30px 0;
+    }
+
+    .symbol-wrap {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .symbol-img {
+      width: 180px;
+      height: 140px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #ffe1ea, #fff7f9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 70px;
+    }
+
+    .logo {
+      width: 230px;
+      height: 230px;
+      border: 8px solid #d84c73;
+      border-radius: 50%;
+      margin: 20px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      color: #d84c73;
+      font-weight: 800;
+    }
+
+    .logo::before {
+      content: "";
+      width: 160px;
+      height: 160px;
+      border: 3px solid #d84c73;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .logo-main {
+      font-size: 46px;
+      z-index: 2;
+    }
+
+    .logo-text {
+      position: absolute;
+      bottom: 38px;
+      font-size: 16px;
+      letter-spacing: 2px;
+      z-index: 2;
+    }
+
+    .song {
+      text-align: center;
+      background: linear-gradient(180deg, #fff, #fff6fa);
+    }
+
+    .song h2 {
+      font-size: 32px;
+      margin-bottom: 24px;
+    }
+
+    .lyrics {
+      font-size: 20px;
+      line-height: 2.1;
+      white-space: pre-line;
+    }
+
+    .tag {
+      color: #d84c73;
+      font-weight: 700;
+    }
+
+    @media (max-width: 700px) {
+      .symbol-wrap {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .motto {
+        font-size: 26px;
+        letter-spacing: 4px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+
+    <div class="main-title">
+      <h1>오름예술고등학교 소개</h1>
+      <p>예술로 꿈을 키우고, 조화로운 미래를 그리는 학교</p>
+    </div>
+
+    <section class="section">
+      <div class="section-title">교훈 |</div>
+      <div class="motto">자유 사랑 평화</div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">교목 | 벚나무</div>
+      <div class="symbol-wrap">
+        <div class="symbol-img">🌸</div>
+        <p>
+          벚나무는 봄마다 아름다운 꽃을 피우며 새로운 시작과 희망을 상징합니다.
+          오름예술고등학교는 벚꽃처럼 각자의 개성과 재능을 활짝 피우는 학생들을 길러내고자 합니다.
+          또한 함께 피어날 때 더욱 아름다운 벚꽃처럼, 협동과 배려의 마음을 소중히 여깁니다.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">교화 | 라일락</div>
+      <div class="symbol-wrap">
+        <div class="symbol-img">💜</div>
+        <p>
+          라일락은 은은한 향기와 맑은 색으로 순수한 열정과 예술적 감성을 상징합니다.
+          오름예술고등학교의 학생들이 자신만의 향기로운 재능을 세상에 펼치고,
+          따뜻한 마음과 깊은 감수성을 지닌 예술인으로 성장하길 바라는 뜻을 담고 있습니다.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">교표 |</div>
+
+      <div class="logo">
+        <div class="logo-main">오름</div>
+        <div class="logo-text">ARTS HIGH SCHOOL</div>
+      </div>
+
+      <p>
+        교표의 원형은 조화와 공동체를 의미하며, 중앙의 <span class="tag">오름</span>은
+        학생들이 꿈과 재능을 향해 한 걸음씩 성장해 나간다는 뜻을 담고 있습니다.
+        분홍빛 테두리는 벚꽃의 따뜻함과 예술적 감성을 상징합니다.
+      </p>
+    </section>
+
+    <section class="section song">
+      <div class="section-title">교가 |</div>
+      <h2>오름의 노래</h2>
+
+      <div class="lyrics">
+벚꽃 핀 언덕 위에 꿈이 피어나
+맑은 하늘 아래 노래가 흐르네
+
+붓끝엔 우리의 마음이 담기고
+선율엔 내일의 빛이 번지네
+
+오름의 이름으로 함께 나아가
+자유와 사랑과 평화를 품으리
+
+예술의 길 위에서 빛나는 우리
+오름예고 영원히 피어나리
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>
