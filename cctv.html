@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CCTV ARCHIVE</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #050505;
+      color: white;
+      font-family: Consolas, monospace;
+    }
+
+    .warning {
+      padding: 22px 16px;
+      text-align: center;
+      color: #ff2020;
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+      border-bottom: 1px solid rgba(255, 0, 0, 0.4);
+    }
+
+    .cctv-wrap {
+      min-height: calc(100vh - 80px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 16px;
+    }
+
+    .cctv-frame {
+      width: min(95vw, 1100px);
+      border: 2px solid rgba(255, 0, 0, 0.45);
+      box-shadow: 0 0 30px rgba(255, 0, 0, 0.25);
+      background: #000;
+      padding: 10px;
+      position: relative;
+    }
+
+    .cctv-frame::before {
+      content: "● REC   CAMERA 01";
+      position: absolute;
+      top: 18px;
+      left: 22px;
+      color: #ff3333;
+      font-size: 18px;
+      z-index: 2;
+      text-shadow: 0 0 8px #000;
+    }
+
+    #cctvImage {
+      width: 100%;
+      display: block;
+      filter: contrast(1.1) brightness(0.85) grayscale(1);
+    }
+
+    .caption {
+      margin-top: 10px;
+      color: #aaa;
+      font-size: 14px;
+      text-align: right;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="warning">
+    WARNING · RESTRICTED ACCESS · SECURITY FOOTAGE · DO NOT LEAK
+  </div>
+
+  <main class="cctv-wrap">
+    <div class="cctv-frame">
+      <img id="cctvImage" src="parkjin1.png" alt="CCTV 화면" />
+      <div class="caption">ARCHIVE_PLAYBACK / CCTV_01</div>
+    </div>
+  </main>
+
+  <script>
+    const frames = [
+      "parkjin1.png",
+      "parkjin2.png",
+      "shadow.png"
+    ];
+
+    let index = 0;
+
+    setInterval(() => {
+      index = (index + 1) % frames.length;
+      document.getElementById("cctvImage").src = frames[index];
+    }, 1200);
+  </script>
+</body>
+</html>
